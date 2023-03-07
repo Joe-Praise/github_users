@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* github users */
+h1 {
+	text-align: center;
+	padding: 40px 0;
+	font-weight: 500;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-container {
+	padding: 0;
+	width: 97%;
+	margin: 0 auto;
+	display: grid;
+	row-gap: 2%;
+	column-gap: 1%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-list {
+  list-style-type: none;
+	box-shadow: 2px 3px 10px lightgray;
+	border-radius: 6px;
+	padding: 8px;
+}
+.user-list:hover img, .user-list:hover .user-container--info-container{
+  transform: scale(1.07);
+  transition: transform 0.3s;
+}
+.user-list a {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  color: black;
+  gap: 3%;
+	font-size: 14px;
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
+.user-list img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-container--info-container {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.user-info--name {
+	font-size: 17px;
+	margin-bottom: 4px;
+}
+.user-info--profile {
+	color: black;
+	font-size: 14px;
+  text-decoration: underline;
+	font-style: oblique;
 }
